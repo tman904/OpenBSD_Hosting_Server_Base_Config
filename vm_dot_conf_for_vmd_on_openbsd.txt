@@ -1,0 +1,34 @@
+switch "switch_lan" {
+
+	interface veb0
+}
+
+switch "switch_wan" {
+	
+	interface veb1
+}
+
+vm "client1" {
+
+	memory 1G
+	disk /home/teetech/client1.qcow2
+	enable
+	interface { switch "switch_lan" }
+}
+
+vm "client2" {
+
+	memory 1G
+	disk /home/teetech/client2.qcow2
+	enable
+	interface { switch "switch_wan" }
+}
+
+vm "router" {
+
+	memory 1G
+	disk /home/teetech/router.qcow2
+	enable
+	interface { switch "switch_lan" }
+	interface { switch "switch_wan" }
+}

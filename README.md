@@ -30,10 +30,11 @@ Note if you can't afford the MVNO Service you can also as a last resort use TOR 
 
 12. For ease of use and automation you can edit the .ovpn and put the username and password inside of the file this makes openvpn put the username and password values in automatically instead of you having to type them.
 On any newline/blank line in the .ovpn file add this:
-<auth-user-pass>
+
+Wrap the user and password inside of brackets XML start and stop tags style with "auth-user-pass" as the name.
 someusername
 somepassword
-</auth-user-pass>
+
 
 13. Repeat step 12 for this step but on the server with the "server" users .ovpn file.
 

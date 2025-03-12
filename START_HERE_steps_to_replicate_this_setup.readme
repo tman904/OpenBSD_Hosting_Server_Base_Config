@@ -41,9 +41,9 @@ somepassword
 
 15. Now you should be able to connect to the VPN on the client system.
 
-16. Once connected to the VPN as the "demo" user and the "server" use is also connected properly. You can use "ssh demo@10.255.255.2" and you should now have ssh access from the client into the server.
+16. Once connected to the VPN as the "demo" user and the "server" user is also connected properly. You can use "ssh demo@10.255.255.2" and you should now have ssh access from the client directly into the servers VM.
 
 Note you can also install web servers inside of the VM and access them using the hypervisor servers VPN IP address 10.255.255.2 in this example. This could be expanded to support more types of server programs in the VMs. 
 
-Note I've only allowed tcp ports 80, 443 and 21 out of the VM to the internet. Along with UDP port 53. No icmp is allowed out from the VMs to prevent things like traceroute from being used. This configuration prevents pentesting and tor use from the VM out to the internet at large.
+Note I've only allowed tcp ports 80, 443 and 21 out of the VM to the internet. Along with UDP port 53. No icmp is allowed out from inside the VMs to prevent things like traceroute from being used. This configuration prevents pentesting and tor use from the VM out to the internet at large.
 
